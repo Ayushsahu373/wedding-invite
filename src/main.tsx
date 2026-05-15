@@ -1,0 +1,13 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./styles/main.scss";
+import { MusicProvider } from "./context/MusicContext";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <MusicProvider>
+      <App />
+    </MusicProvider>
+  </React.StrictMode>,
+);

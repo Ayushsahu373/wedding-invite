@@ -1,0 +1,56 @@
+.intro-container {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle, #0a0a0a, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mandala-wrapper {
+  margin-bottom: 30px;
+}
+
+.mandala {
+  width: 220px;
+  filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.5));
+}
+
+.intro-title {
+  font-size: 42px;
+  margin-top: 10px;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+.intro-subtitle {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.enter-btn {
+  margin-top: 40px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #d4af37;
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .mandala {
+    width: 160px;
+  }
+
+  .intro-title {
+    font-size: 30px;
+  }
+}
