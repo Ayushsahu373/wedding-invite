@@ -1,5 +1,11 @@
+import EventSection from "../components/events/EventsSection";
+import MainLayout from "../layouts/MainLayout";
 const Events = () => {
-  return <div>Events Page</div>;
+  return (
+    <MainLayout>
+      <EventSection />
+    </MainLayout>
+  );
 };
 
 export default Events;

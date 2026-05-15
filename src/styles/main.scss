@@ -1,4 +1,13 @@
 @use "./pages/intro";
+@use "./components/hero";
+@use "./components/countdown";
+@use "./components/navbar";
+@use "./components/events";
+@use "./components/gallery";
+@use "./components/quote";
+@use "./components/venue";
+@use "./components/petalSystem";
+
 body {
   margin: 0;
   font-family: sans-serif;

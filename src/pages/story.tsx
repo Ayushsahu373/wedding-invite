@@ -1,5 +1,11 @@
+import StoryTimeline from "../components/story/StoryTimeline";
+import MainLayout from "../layouts/MainLayout";
 const Story = () => {
-  return <div>Story Page</div>;
+  return (
+    <MainLayout>
+      <StoryTimeline />
+    </MainLayout>
+  );
 };
 
 export default Story;

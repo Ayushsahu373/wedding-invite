@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { useMusic } from "../../hooks/useMusic";
 import "../../styles/pages/_intro.scss";
+import mandalaImg from "../../assets/images/hero/mandala.png";
 
 interface Props {
   onEnter: () => void;
@@ -67,11 +68,7 @@ const MandalaIntro: React.FC<Props> = ({ onEnter }) => {
   return (
     <div className="intro-container">
       <div className="mandala-wrapper">
-        <img
-          src="/assets/images/mandala.png"
-          alt="mandala"
-          className="mandala"
-        />
+        <img src={mandalaImg} alt="mandala" className="mandala" />
       </div>
 
       <h1 className="intro-title">XYZ ❤️ ABC</h1>

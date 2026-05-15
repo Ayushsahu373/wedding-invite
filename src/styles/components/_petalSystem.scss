@@ -1,0 +1,100 @@
+@use "../abstracts/variables" as *;
+
+.petal-system {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: $z-base;
+}
+
+/* SINGLE PETAL */
+
+.petal {
+  position: absolute;
+
+  top: -10%;
+
+  border-radius: 50% 50% 50% 0;
+
+  opacity: 0.75;
+
+  filter: blur(0.3px);
+
+  animation-name: petalFall;
+
+  animation-timing-function: linear;
+
+  animation-iteration-count: infinite;
+
+  will-change: transform, opacity;
+}
+
+/* COLOR VARIANTS */
+
+.petal-1 {
+  background: radial-gradient(circle at top, #ffd6dc, #ffb7c5);
+}
+
+.petal-2 {
+  background: radial-gradient(circle at top, #ffe7ba, #ffc97a);
+}
+
+.petal-3 {
+  background: radial-gradient(circle at top, #fff1f1, #f7caca);
+}
+
+.petal-4 {
+  background: radial-gradient(circle at top, #f5d0e6, #e8a7c7);
+}
+
+/* FALL ANIMATION */
+
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translate3d(40px, 50vh, 0) rotate(180deg);
+  }
+
+  100% {
+    transform: translate3d(-60px, 110vh, 0) rotate(360deg);
+
+    opacity: 0;
+  }
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: $tablet) {
+  .petal {
+    opacity: 0.55;
+
+    filter: blur(0.2px);
+  }
+}
+
+/* REDUCED MOTION SUPPORT */
+
+@media (prefers-reduced-motion: reduce) {
+  .petal {
+    animation: none;
+
+    opacity: 0.2;
+  }
+}

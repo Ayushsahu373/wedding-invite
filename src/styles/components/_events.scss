@@ -1,0 +1,143 @@
+.events-section {
+  padding: 140px 20px;
+
+  background: linear-gradient(to bottom, #120909, #050505);
+}
+
+.events-heading {
+  text-align: center;
+
+  margin-bottom: 80px;
+
+  p {
+    color: #d4af37;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 52px;
+    max-width: 800px;
+    margin: auto;
+  }
+}
+
+.events-grid {
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 40px;
+}
+
+.event-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  min-height: 500px;
+
+  cursor: pointer;
+
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.event-image {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 1s ease;
+  }
+}
+
+.event-card:hover img {
+  transform: scale(1.08);
+}
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
+}
+
+.event-content {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  padding: 40px;
+
+  z-index: 2;
+
+  h3 {
+    font-size: 40px;
+    margin: 16px 0;
+  }
+
+  p {
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+}
+
+.event-date {
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+
+.event-venue {
+  margin-top: 20px;
+}
+
+/* Theme Accents */
+
+.haldi {
+  border: 1px solid rgba(255, 196, 0, 0.3);
+}
+
+.mehendi {
+  border: 1px solid rgba(0, 255, 140, 0.2);
+}
+
+.sangeet {
+  border: 1px solid rgba(174, 0, 255, 0.25);
+}
+
+.wedding {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.reception {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .events-heading h2 {
+    font-size: 36px;
+  }
+
+  .event-content h3 {
+    font-size: 28px;
+  }
+}

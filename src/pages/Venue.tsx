@@ -1,5 +1,12 @@
+import VenueSection from "../components/venue/VenueSection";
+import MainLayout from "../layouts/MainLayout";
+
 const Venue = () => {
-  return <div>Venue Page</div>;
+  return (
+    <MainLayout>
+      <VenueSection />
+    </MainLayout>
+  );
 };
 
 export default Venue;

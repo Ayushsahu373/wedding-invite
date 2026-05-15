@@ -1,0 +1,119 @@
+.music-toggle {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 16px 10px 12px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  cursor: pointer;
+  color: #d4af37;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: rgba(212, 175, 55, 0.7);
+    background: rgba(0, 0, 0, 0.75);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  // icon
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // animated bars (visible only when playing)
+  &__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 14px;
+
+    span {
+      display: block;
+      width: 2px;
+      background: #d4af37;
+      border-radius: 2px;
+      transform-origin: bottom;
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          height: #{4 + $i * 2}px;
+        }
+      }
+    }
+  }
+
+  // animate bars when playing
+  &.playing .music-toggle__bars span {
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation: barBounce 0.8s ease-in-out #{$i * 0.1}s infinite alternate;
+      }
+    }
+  }
+
+  // static bars when muted
+  &.muted .music-toggle__bars span {
+    opacity: 0.25;
+    animation: none;
+  }
+
+  &__label {
+    color: rgba(212, 175, 55, 0.8);
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+@keyframes barBounce {
+  from {
+    transform: scaleY(0.4);
+    opacity: 0.6;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .music-toggle {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px 8px 10px;
+
+    &__label {
+      display: none;
+    }
+  }
+}

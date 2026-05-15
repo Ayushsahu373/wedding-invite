@@ -1,0 +1,185 @@
+/* =========================================
+   COLORS
+========================================= */
+
+$color-black: #050505;
+
+$color-maroon: #120909;
+
+$color-burgundy: #1a0d0d;
+
+$color-gold: #d4af37;
+
+$color-rose-gold: #b76e79;
+
+$color-amber: #ffb347;
+
+$color-cream: #f8f4ec;
+
+$color-soft-pink: #f6d6d6;
+
+$color-white: #ffffff;
+
+$color-text-light: rgba(255, 255, 255, 0.85);
+
+$color-text-muted: rgba(255, 255, 255, 0.65);
+
+$color-border: rgba(255, 255, 255, 0.08);
+
+$color-glass: rgba(255, 255, 255, 0.05);
+
+/* =========================================
+   GRADIENTS
+========================================= */
+
+$gradient-dark: linear-gradient(to bottom, #050505, #120909);
+
+$gradient-gold: linear-gradient(135deg, #d4af37, #ffdf80);
+
+$gradient-overlay: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.85)
+);
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+$font-heading: "Cinzel Decorative", serif;
+
+$font-script: "Great Vibes", cursive;
+
+$font-body: "Poppins", sans-serif;
+
+$font-secondary: "Lora", serif;
+
+/* =========================================
+   FONT SIZES
+========================================= */
+
+$text-xs: 12px;
+
+$text-sm: 14px;
+
+$text-md: 16px;
+
+$text-lg: 18px;
+
+$text-xl: 24px;
+
+$text-2xl: 36px;
+
+$text-3xl: 52px;
+
+$text-4xl: 72px;
+
+$text-hero: clamp(52px, 9vw, 120px);
+
+/* =========================================
+   SPACING
+========================================= */
+
+$space-xs: 4px;
+
+$space-sm: 8px;
+
+$space-md: 16px;
+
+$space-lg: 24px;
+
+$space-xl: 40px;
+
+$space-2xl: 60px;
+
+$space-3xl: 100px;
+
+$section-padding: 140px 20px;
+
+/* =========================================
+   BORDER RADIUS
+========================================= */
+
+$radius-sm: 10px;
+
+$radius-md: 18px;
+
+$radius-lg: 28px;
+
+$radius-full: 999px;
+
+/* =========================================
+   SHADOWS
+========================================= */
+
+$shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+$shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+$shadow-heavy: 0 30px 100px rgba(0, 0, 0, 0.5);
+
+$shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.25);
+
+/* =========================================
+   GLASS EFFECT
+========================================= */
+
+$glass-bg: rgba(255, 255, 255, 0.05);
+
+$glass-border: 1px solid rgba(255, 255, 255, 0.08);
+
+$glass-blur: blur(14px);
+
+/* =========================================
+   TRANSITIONS
+========================================= */
+
+$transition-fast: 0.2s ease;
+
+$transition-medium: 0.4s ease;
+
+$transition-slow: 0.8s ease;
+
+$transition-cinematic: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+/* =========================================
+   Z-INDEX SYSTEM
+========================================= */
+
+$z-background: -1;
+
+$z-base: 1;
+
+$z-content: 10;
+
+$z-navbar: 100;
+
+$z-overlay: 500;
+
+$z-loader: 1000;
+
+$z-modal: 9999;
+
+/* =========================================
+   CONTAINER WIDTHS
+========================================= */
+
+$container-sm: 768px;
+
+$container-md: 1024px;
+
+$container-lg: 1280px;
+
+$container-xl: 1440px;
+
+/* =========================================
+   BREAKPOINTS
+========================================= */
+
+$mobile: 480px;
+
+$tablet: 768px;
+
+$laptop: 1024px;
+
+$desktop: 1280px;

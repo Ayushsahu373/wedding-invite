@@ -1,0 +1,116 @@
+.quote-section {
+  position: relative;
+
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  overflow: hidden;
+
+  background: url("/assets/images/quote-bg.jpg") center/cover no-repeat;
+}
+
+/* DARK CINEMATIC OVERLAY */
+
+.quote-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+/* CONTENT */
+
+.quote-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+}
+
+.quote-symbol {
+  display: block;
+
+  font-size: 80px;
+
+  color: #d4af37;
+
+  margin-bottom: 20px;
+
+  opacity: 0.7;
+}
+
+.quote-content h2 {
+  font-size: clamp(40px, 7vw, 82px);
+
+  line-height: 1.2;
+
+  margin-bottom: 30px;
+
+  font-weight: 500;
+}
+
+.quote-content p {
+  font-size: 22px;
+
+  letter-spacing: 4px;
+
+  color: #d4af37;
+
+  text-transform: uppercase;
+}
+
+/* GLOW EFFECTS */
+
+.quote-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  opacity: 0.15;
+}
+
+.glow-1 {
+  width: 400px;
+  height: 400px;
+
+  background: #d4af37;
+
+  top: -100px;
+  left: -100px;
+}
+
+.glow-2 {
+  width: 350px;
+  height: 350px;
+
+  background: #8b0000;
+
+  bottom: -100px;
+  right: -100px;
+}
+
+@media (max-width: 768px) {
+  .quote-section {
+    min-height: 60vh;
+  }
+
+  .quote-content p {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+  }
+}

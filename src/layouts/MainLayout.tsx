@@ -1,5 +1,8 @@
 import type { ReactNode } from "react";
+
+import FloatingNavbar from "../components/ui/FloatingNavbar";
 import MusicToggle from "../components/ui/MusicToggle";
+import Footer from "../components/footer/footer";
 
 interface Props {
   children: ReactNode;
@@ -7,10 +10,15 @@ interface Props {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <div>
-      {children}
+    <>
+      <FloatingNavbar />
+
+      <main>{children}</main>
+
+      <Footer />
+
       <MusicToggle />
-    </div>
+    </>
   );
 };
 
